@@ -6,6 +6,7 @@ import fr.diginamic.persistence.dao.DirectorDao;
 import fr.diginamic.persistence.dao.GenreDao;
 import fr.diginamic.persistence.dao.LanguageDao;
 import fr.diginamic.persistence.dao.LocationDao;
+import fr.diginamic.persistence.dao.MovieDao;
 import fr.diginamic.persistence.dao.RoleDao;
 import fr.diginamic.services.MovieService;
 
@@ -27,6 +28,7 @@ public class ServiceLoader {
     private static final LocationDao locationDao = new LocationDaoImpl();
     private static final GenreDao genreDao = new GenreDaoImpl();
     private static final DirectorDao directorDao = new DirectorDaoImpl();
+    private static final MovieDao movieDao = new MovieDaoImpl();
 
     /**
      * Loads an implementation of the specified service interface.
@@ -55,6 +57,8 @@ public class ServiceLoader {
             return (T) genreDao;
         } else if (service.equals(DirectorDao.class)) {
             return (T) directorDao;
+        }else if (service.equals(MovieDao.class)) {
+            return (T) movieDao;
         } else {
             throw new IllegalArgumentException("Invalid service class: " + service.getName());
         }
