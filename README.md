@@ -6,6 +6,49 @@
 2. Mettre en base de données des informations concernant le cinéma,
 3. Mettre au point une petite application permettant d’effectuer des recherches dans les données en fonction de demandes d’un utilisateur.
 
+## Tree
+```
+.
+├── LICENSE
+├── README.md
+├── assets
+│   └── films.json
+├── conception
+│   ├── ERD.png
+│   └── class_diagram.pdf
+├── pom.xml
+├── sql
+│   └── create_tables.sql
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── fr
+    │   │       └── diginamic
+    │   │           ├── annotation
+    │   │           ├── data
+    │   │           ├── di
+    │   │           ├── logging
+    │   │           ├── menu
+    │   │           │   ├── action
+    │   │           │   └── exception
+    │   │           ├── model
+    │   │           ├── persistence
+    │   │           │   ├── dao
+    │   │           │   └── entities
+    │   │           ├── services
+    │   │           └── util
+    │   └── resources
+    │       ├── META-INF
+    │       │   ├── persistence.xml
+    │       │   └── services
+    │       │       └── javax.annotation.processing.Processor
+    │       └── log4j.properties
+    └── test
+        └── java
+
+```
+
+
 ## Description
 
 Des éléments présents dans le fichier [JSON](assets/films.json) :
